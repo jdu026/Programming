@@ -1,4 +1,4 @@
-let count = 0;
+let count = 100;
 
 //html -> js
 // function count(){
@@ -42,6 +42,7 @@ const plusButton = document.getElementsByClassName("plusBtn")[0];
 //     //숫자 표시
 //     resultH1.innerHTML= count;
 // };
+resultH1.innerHTML = count;
 function plus(number=1) {
     //숫자 증가
     count += number; //count += 1; // count = count +1;
