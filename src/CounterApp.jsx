@@ -4,7 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 // import './App.css'
 
-function CounterApp() {
+function TodoListApp() {
   //count: 이전 또는 현재 값. setCount(): count값 변경 함수 반드시 이걸 거쳐야 함
   const [count, setCount] = useState(0)
   function plusMax10(){
@@ -43,4 +43,4 @@ function CounterApp() {
   )
 }
 
-export default CounterApp
+export default TodoListApp
