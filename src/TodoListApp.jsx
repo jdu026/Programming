@@ -1,4 +1,10 @@
+//https://programming-3215.s2434.workers.dev
+
+
 import "./todolist.css"
+import Button from "./components/Button.jsx"
+import CheckBox from "./components/CheckBox.jsx";
+import TodoItemEmpty from "./components/TodoItemEmpty.jsx";
 
 function TodoListApp() {
   return (
@@ -6,15 +12,12 @@ function TodoListApp() {
       <h1 className="todo__title">Todo Todo</h1>
       <form className="todo__form">
         <input type="text" className="todo__input" placeholder="할 일을 입력하세요" />
-        <button type="submit" className="todo__button todo__button--add">Add</button>
+        <Button type="submit" className="todo__button todo__button--add">Add</Button>
       </form>
       <ul className="todo__list">
-        <li className="todo__item todo__item--empty">
-          <p>할 입 없음</p>
-        </li>
+        <TodoItemEmpty/>
         <li className="todo__item todo__item--complete">
-          <input type="checkbox" className="todo__check" name="" id="chk-1" />
-          <label htmlFor="chk-1" className="todo__label">옷 싸기</label>
+          <CheckBox type="checkBox" className="todo__check" name="" id="1" />
           <button className="todo__button todo__button--edit">🖋️</button>
           <button className="todo__button todo__button--delete">🚮</button>
         </li>
