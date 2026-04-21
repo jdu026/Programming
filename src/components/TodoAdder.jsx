@@ -4,6 +4,7 @@ import Button from './Button.jsx';
 
 export default function TodoAdder({addTodo}) {
     const [inputTodo, setInputTodo] = useState('');
+    
     const handleSumbit = (event) => {
         event.preventDefault(); //기본 동작 막자
         if(!inputTodo.trim()) return; //빈칸이면 바로 return
