@@ -46,8 +46,8 @@
 
 }
 .todo__check{
-    width: 10px;
-    height: 10px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
     accent-color: #999; /* 체크한 배경색: 눈에 안띄게*/
 
