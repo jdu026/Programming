@@ -21,7 +21,7 @@ class Todo {
 
 function TodoListApp() {
   const [todos, setTodos] = useState([]);
-  function addTodo(text){
+  function addTodo(text) {
     //이전 todos에 newTodo 만들어서 추가하자 -> 그것을 setTodos() 하자
     setTodos((todos) => [
       ...todos, //todos에 있는 item을 다 꺼내서 새로운 리스트에 하나씨 넣자
@@ -30,34 +30,43 @@ function TodoListApp() {
         text, //text:할 일 내용
         false //isCompleted: 할 일의 완료 여부 초기값은 false
       )
-    ]);  
+    ]);
   }
 
-  function toggleTodo(id){
-    setTodos((todos) => 
+  function toggleTodo(id) {
+    setTodos((todos) =>
       //todos에서 하나씩 꺼내서, todo, 꺼낸 todo의 id와 id가 같다면, 
       //새 객체 만들어서 todo 값 복사, 속성 수정 
 
-      todos.map((todo)=>
-        todo.id === id ? {...todo, isCompleted: !todo.isCompleted} : todo
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
 
       )
     )
   }
 
-  function deleteTodo(id){
+  function deleteTodo(id) {
     //todos를 하나씩 꺼내어 todo, todo.id==id
-    setTodos((todos)=>
-      todos.filter((todo)=> todo.id !== id)
+    setTodos((todos) =>
+      todos.filter((todo) => todo.id !== id)
 
+    )
+  }
+
+  function editTodo(id, newText) {
+    //todos 하나씩 꺼내어 todo, id가 같으면 text: newText
+    setTodos((todos) =>
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, text: newText } : todo
+      )
     )
   }
 
   return (
     <div className="todo">
       <TodoHeader />
-      <TodoAdder addTodo={addTodo}/>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+      <TodoAdder addTodo={addTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo} />
     </div>
   )
 }
