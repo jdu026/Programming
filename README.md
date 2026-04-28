@@ -11,3 +11,18 @@ npm create vite@latest.
 - onClick = {함수이름}
 
 ### TodoListApp
+- React Component분리
+- for -> htmlFor, class -> className
+- props
+- `<input id="{id} value={}/>`, `<label htmlFor={id} />`
+- onChange
+- 구조 분해 할당, `...스프레드연산자`
+- `<form onSubmit = {}></form`
+- map(): RU
+- `filter()`: D
+- `<TodoItem key{}/>`
+- `const handleEVent = (event) => {}`
+- `{조건식 ? 참 : 거짓}`
+- `{조건식 && 참}`,`{~조건식 && 거짓}`
+- onkeyDown
+- LocalStorage, `useEffect()`
